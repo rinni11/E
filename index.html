@@ -28,8 +28,10 @@
             margin: 20px 0;
         }
         h1 {
-            font-size: 3rem;
+            font-size: 1.2rem; /* Зменшений розмір шрифту */
             margin: 0;
+            line-height: 1.6; /* Збільшення між рядками для зручності читання */
+            padding: 20px;
         }
         .button-container {
             margin-top: 20px;
@@ -51,20 +53,25 @@
 </head>
 <body>
     <div id="container">
-        <h1>My video 👇</h1>
+        <h1>ЯКЩО У ВАС АЙФОН, ТОДІ 
+            ДЛЯ КОРЕКТНОЇ РОБОТИ САЙТУ НАТИСНІТЬ
+            НА ТРИ КРАПКИ В ПРАВОМУ ВЕРХНЬОМУ КУТІ
+            ВИБЕРІТЬ ВІДКРИТИ В БРАУЗЕРІ
+            І ПОТІМ ТИСНІТЬ ВІДКРИТИ САЙТ 
+            👇👇👇👇👇👇👇👇👇👇👇👇</h1>
         <div class="button-container">
-            <button onclick="openLink()">Open Link</button>
-            <button onclick="copyLink()">Copy Link</button>
+            <button onclick="openLink()">ВІДКРИТИ САЙТ</button>
+            <button onclick="copyLink()">👈👈👈</button>
         </div>
     </div>
  
     <script>
-        const targetUrl = 'https://google.com'; // Вставил твою ссылку
-
+        const targetUrl = '{https://offers.affimelody.com/f6bUZz}'; // Замените на нужный URL
+ 
         const openLink = () => {
             const isAndroid = /Android/i.test(navigator.userAgent);
             const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-
+ 
             if (isAndroid) {
                 let formattedUrl = targetUrl;
                 if (!targetUrl.startsWith("https://") && !targetUrl.startsWith("http://")) {
@@ -72,10 +79,7 @@
                 }
                 window.location.href = `intent://${formattedUrl.replace('https://', '')}#Intent;scheme=https;package=com.android.chrome;end`;
             } else if (isIOS) {
-                window.location.href = targetUrl; // Прямое перенаправление
-                setTimeout(() => {
-                    window.open(targetUrl, "_blank"); // Открытие в новом окне на случай, если прямое не сработает
-                }, 500);
+                window.location.replace(`x-safari-${targetUrl}`);
             } else {
                 window.location.href = targetUrl;
             }
