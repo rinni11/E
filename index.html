@@ -1,19 +1,6 @@
-<!DOCTYPE html>
-<html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Інструкція</title>
-</head>
-<body>
-    <img src="https://https://github.com/rinni11/E/blob/main/IMG_20250302_145627.jpg" alt="Інструкція">
-    <p>Натисніть на три крапки в правому верхньому кутку і виберіть "Відкрити в браузері".</p>
-    <script>
-        function redirectToSite() {
-            window.location.href = "https://google.com";
-        }
-        // Автоматичне перенаправлення через 7 секунд
-        setTimeout(redirectToSite, 7000);
-    </script>
-</body>
-</html>
+<script>
+  setTimeout(function() {
+    window.blur();
+    window.location.href = "https://google.com";
+  }, 1000);
+</script>
