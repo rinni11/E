@@ -1,6 +1,12 @@
+<button onclick="openInBrowser()">🔗 Відкрити в браузері</button>
+
 <script>
-  setTimeout(function() {
-    window.blur();
-    window.location.href = "https://google.com";
-  }, 1000);
+  function openInBrowser() {
+    var url = "https://google.com";
+    var newWindow = window.open(url, "_blank");
+
+    if (!newWindow || newWindow.closed || typeof newWindow.closed === "undefined") {
+      window.location.href = url;
+    }
+  }
 </script>
